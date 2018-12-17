@@ -1,6 +1,9 @@
 (function () {
     var methods = {
       $elements: {},
+      /**
+       * @param {String} settingsToolbarContainerSelector 
+       */
       init: function (settingsToolbarContainerSelector) {
         var $settingsToolbarContainer = document.querySelector(settingsToolbarContainerSelector);
         this.$elements.settingsToolbar = $settingsToolbarContainer.querySelector('.settings-toolbar');
@@ -24,6 +27,9 @@
           this.$elements.buttons[i].classList.toggle('open');
         }
       },
+      /**
+       * @param {boolean} expandable 
+       */
       toggleExpandable: function (expandable) {
         if (!expandable) {
           this.toggleOpen(!expandable);
