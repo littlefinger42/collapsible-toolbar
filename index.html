@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Collapsible Toolbar</title>
+        <link rel="stylesheet" href="css/settings-toolbar.css">
+        <script src='js/settings-toolbar.js'></script>
+    </head>
+    <body>
+        <div class="settings-toolbar-container">
+			<div class="settings-toolbar">
+				<a class="setting actions" title="Open settings toolbar">></a>
+				<a data-setting="setting1" class="setting" title="Setting 1"></a>
+				<a data-setting="setting2" class="setting" title="Setting 2"></a>
+				<a data-setting="setting3" class="setting" title="Setting 3"></a>
+				<a data-setting="setting4" class="setting" title="Setting 4"></a>
+				<div class="behind-color"></div>
+			</div>
+        </div>
+        <script>
+                window.settingsToolbar('.settings-toolbar-container');
+        </script>
+    </body>
+</html>

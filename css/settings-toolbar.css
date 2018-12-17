@@ -1,0 +1,78 @@
+.settings-toolbar-container {
+    height: 100%;
+    position: relative;
+    pointer-events: none;
+}
+.settings-toolbar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 34px;
+    pointer-events: auto;
+}
+.settings-toolbar .behind-color {
+    height: 38px;
+    width: 38px;
+    border-radius: 40px;
+    position: absolute;
+    right: 3px;
+    background-color: transparent;
+    margin: -3px -3px 0 0;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+}
+.settings-toolbar .behind-color.open {
+    background-color: yellow;
+    width: 100%;
+}
+
+.settings-toolbar .setting {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border-radius: 20px;
+    border: solid 1px black;
+    float: right;
+    font-size: 24px;
+    margin: 0 4px;
+    transition: all 0.2s 0.1s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+.settings-toolbar .setting.open,
+.settings-toolbar .setting.actions {
+    opacity: 1;
+    visibility: visible;
+}
+.settings-toolbar .setting.active,
+.settings-toolbar .setting:focus,
+.settings-toolbar .setting:hover {
+    outline: none;
+    border: solid 1px transparentize(white, 0.4);
+}
+.settings-toolbar .setting.actions {
+    transition: all 0.4s ease-in-out;
+    background: url($more-closed-bg) no-repeat 0 0;
+    background-size: contain;
+}
+.settings-toolbar .setting.actions.open {
+    transform: rotate(180deg);
+}
+@media only screen and (min-width: 768px) {
+    .settings-toolbar { 
+        height: 42px;
+        right: -4px;
+    }
+    .settings-toolbar .behind-color.open,
+    .settings-toolbar .setting.actions {
+        display: none;
+    }
+    .settings-toolbar .setting {
+        width: 40px;
+        height: 40px;
+        margin: 0 8px;
+        opacity: 1;
+        visibility: visible;
+    }
+}
