@@ -53,8 +53,6 @@
 }
 .settings-toolbar .setting.actions {
     transition: all 0.4s ease-in-out;
-    background: url($more-closed-bg) no-repeat 0 0;
-    background-size: contain;
 }
 .settings-toolbar .setting.actions.open {
     transform: rotate(180deg);
